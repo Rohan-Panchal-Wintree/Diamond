@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  font-family: "Gilda Display", serif;
+  letter-spacing: -0.4rem;
+}
+
+.bg-button {
+  background-image: url("assets/button-bg.jpg");
+}
+
+.home,
+.home-second-section {
+  background-image: url("assets/brown-luxury-fabric.png");
+  background-size: cover; /* Makes sure the background covers the whole area */
+  background-position: center; /* Centers the background image */
+  width: 100%;
+}
+
+.home-second-section {
+  background-image: url("assets/abstract-background-luxury-cloth-liquid-wave.png");
+}
+
+/* adds this font to the element */
+.gilda {
+  font-family: "Gilda Display", serif;
+}
+
+.border-light {
+  border: 1px solid #3c3839;
+}
+
+.brown-gradient {
+  background-image: linear-gradient(to top, #c9563f 20%, #9b4431, #853425 70%);
+}
+
+.brown-gradient-reverse {
+  background-image: linear-gradient(
+    to bottom,
+    #c9563f 20%,
+    #9b4431,
+    #853425 70%
+  );
+}

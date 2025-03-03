@@ -1,0 +1,9 @@
+.divider-line {
+  border-color: #3c3839;
+}
+
+.divider-icon {
+  top: -15px;
+  left: 50%;
+  background-image: linear-gradient(to top, #9b4431, #853425);
+}
