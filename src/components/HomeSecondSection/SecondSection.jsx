@@ -11,7 +11,7 @@ const SecondSection = () => {
   useGSAPAnimations("arrow", "slideDown", { duration: 1 });
 
   return (
-    <div className="p-10 pt-20 home-second-section">
+    <div className="p-10 pt-20">
       <div className="p-5 pt-0 pb-0 brown-gradient flex">
         <div className=" text-white w-3/6">
           <div className="flex">

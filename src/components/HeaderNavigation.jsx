@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import MenuSidebar from "./MenuSidebar";
 import "../styles/HeaderNavigation.css";
 import SidebarDrawer from "./SidebarDrawer";
 
@@ -14,7 +13,6 @@ const HeaderNavigation = () => {
           <li className="px-6 uppercase font-thin">shop</li>
         </ul>
         <div>
-          {/* <MenuSidebar /> */}
           <SidebarDrawer />
         </div>
       </nav>

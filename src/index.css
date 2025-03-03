@@ -8,20 +8,11 @@ h1 {
   letter-spacing: -0.4rem;
 }
 
-.bg-button {
-  background-image: url("assets/button-bg.jpg");
-}
-
 .home,
 .home-second-section {
-  background-image: url("assets/brown-luxury-fabric.png");
   background-size: cover; /* Makes sure the background covers the whole area */
   background-position: center; /* Centers the background image */
   width: 100%;
-}
-
-.home-second-section {
-  background-image: url("assets/abstract-background-luxury-cloth-liquid-wave.png");
 }
 
 /* adds this font to the element */

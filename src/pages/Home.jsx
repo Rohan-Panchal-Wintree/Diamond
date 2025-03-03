@@ -7,9 +7,21 @@ import HomeFifthSection from "../components/HomeFifthSection/HomeFifthSection";
 
 const Home = () => {
   return (
-    <div className="home">
-      <HeroSection />
-      <SecondSection />
+    <Fragment>
+      <div
+        className="home"
+        style={{ backgroundImage: `url("assets/brown-luxury-fabric.png")` }}
+      >
+        <HeroSection />
+      </div>
+      <div
+        className="home-second-section"
+        style={{
+          backgroundImage: `url("assets/abstract-background-luxury-cloth-liquid-wave.png")`,
+        }}
+      >
+        <SecondSection />
+      </div>
       <div
         style={{
           backgroundImage: `url("/assets/home-third-section.png")`,
@@ -22,7 +34,7 @@ const Home = () => {
         <hr style={{ border: "1px solid #3E241D" }} />
         <HomeFifthSection />
       </div>
-    </div>
+    </Fragment>
   );
 };
 
