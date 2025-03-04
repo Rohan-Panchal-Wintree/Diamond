@@ -4,8 +4,8 @@ import BgButton from "../BgButton";
 import LinkArrowButton from "../LinkArrowButton";
 
 const HomeFifthSection = () => {
-  useGSAPAnimations("animate-fade", "fade", { duration: 3 });
-  useGSAPAnimations("sparkle", "rotate", { duration: 3 });
+  useGSAPAnimations("animate-fade", "fade", { duration: 4 });
+  useGSAPAnimations("sparkle", "rotate", { duration: 4 });
 
   return (
     <div className="p-4 pt-20">

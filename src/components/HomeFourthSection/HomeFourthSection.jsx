@@ -5,9 +5,9 @@ import FourthSwiper from "./FourthSwiper";
 import { useGSAPAnimations } from "../../utils/useGSAPAnimation";
 
 const HomeFourthSection = () => {
-  useGSAPAnimations("animate-card", "fade", { duration: 2 });
-  useGSAPAnimations("animate-card-two", "fade", { duration: 3 });
-  useGSAPAnimations("word", "fade", { duration: 3 });
+  useGSAPAnimations("animate-card", "fade", { duration: 4 });
+  useGSAPAnimations("animate-card-two", "fade", { duration: 4 });
+  useGSAPAnimations("word", "fade", { duration: 4 });
 
   return (
     <div className="flex">
