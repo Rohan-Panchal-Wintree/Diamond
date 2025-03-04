@@ -97,7 +97,7 @@ const HomeFifthSection = () => {
         </div>
       </div>
       <div className="p-4 py-9 mx-11 mt-10 flex justify-center brown-gradient relative overflow-hidden">
-        <h4 className="text-8xl gilda text-white text-center z-50">
+        <h4 className="text-8xl gilda text-white text-center">
           Personalised jewellery
           <br />
           <span className="flex justify-center">

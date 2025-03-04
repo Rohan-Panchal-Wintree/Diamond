@@ -3,12 +3,14 @@ import AvatarGroup from "../AvatarGroup";
 import { useGSAPAnimations } from "../../utils/useGSAPAnimation";
 import SecondSwiper from "./SecondSwiper";
 import LinkArrowButton from "../LinkArrowButton";
-
 const SecondSection = () => {
   // Animations
   useGSAPAnimations("animate-fade", "fade", { duration: 3 });
   useGSAPAnimations("unleash", "slideUp", { duration: 2 });
+  useGSAPAnimations("earrings", "slideUp", { duration: 2 });
   useGSAPAnimations("arrow", "slideDown", { duration: 1 });
+  useGSAPAnimations("model-image", "slight-rotate", { duration: 3 });
+  useGSAPAnimations("letter", "slight-rotate", { duration: 3 });
 
   return (
     <div className="p-10 pt-20">
@@ -29,7 +31,7 @@ const SecondSection = () => {
             </div>
             <div className="w-6/12 flex">
               <img
-                className="self-end"
+                className="self-end model-image"
                 src="/assets/home-model-2.png"
                 alt="model"
               />
@@ -56,8 +58,8 @@ const SecondSection = () => {
         <div className="w-3/6 pl-3">
           <div>
             <h4 className="text-white gilda text-7xl pt-12 animate-fade">
-              Dare to <span className="italic">dazzle</span> <br />
-              <span className="flex">
+              Dare to <span className="italic letter">dazzle</span> <br />
+              <span className="flex letter">
                 diffrently <AvatarGroup className="ml-5 mt-3" />
               </span>
             </h4>
@@ -82,7 +84,7 @@ const SecondSection = () => {
                     <LinkArrowButton />
                   </div>
                 </div>
-                <div className="w-full pt-5">
+                <div className="w-full pt-5 earrings">
                   <img src="/assets/Earrings-two.png" alt="earrings" />
                 </div>
               </div>

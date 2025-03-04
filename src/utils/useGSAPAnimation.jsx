@@ -81,6 +81,14 @@ export const useGSAPAnimations = (className, effectType, options = {}) => {
               );
               break;
 
+            case "slight-rotate":
+              gsap.fromTo(
+                element,
+                { rotation: 4, opacity: 0 },
+                { rotation: 0, opacity: 1, duration: 1, ...options }
+              );
+              break;
+
             default:
               console.warn(`Unknown effect type: ${effectType}`);
           }

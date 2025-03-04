@@ -2,12 +2,17 @@ import React from "react";
 import Divider from "../Divider";
 import UnderlineButton from "../UnderlineButton";
 import FourthSwiper from "./FourthSwiper";
+import { useGSAPAnimations } from "../../utils/useGSAPAnimation";
 
 const HomeFourthSection = () => {
+  useGSAPAnimations("animate-card", "fade", { duration: 2 });
+  useGSAPAnimations("animate-card-two", "fade", { duration: 3 });
+  useGSAPAnimations("word", "fade", { duration: 3 });
+
   return (
     <div className="flex">
       <div className="w-2/4" style={{ borderRight: "1px solid #3E241D" }}>
-        <div className="p-14 py-24">
+        <div className="p-14 py-24 animate-card">
           <span className="capitalize text-Peach-Puff">premium grade</span>
           <h4 className="capitalize text-2xl text-white pt-3">
             gold plated braceleted
@@ -18,7 +23,7 @@ const HomeFourthSection = () => {
           />
         </div>
         <Divider borderColor="#3E241D" />
-        <div className="p-14 py-24">
+        <div className="p-14 py-24 animate-card-two">
           <h4 className="text-3xl text-white">
             Exquisite{" "}
             <span className="gilda italic text-Peach-Puff">Jewellery</span> for{" "}
@@ -45,7 +50,7 @@ const HomeFourthSection = () => {
             </p>
           </div>
           <div className="p-4 w-full flex items-center">
-            <h4 className="gilda leading-none text-7xl text-Peach-Puff">
+            <h4 className="gilda leading-none text-7xl text-Peach-Puff word">
               <span className="italic">Glamour</span> that <br />
               <span className="pl-20">steals the show</span>
             </h4>

@@ -1,11 +1,16 @@
 import React from "react";
 import { IoIosPlayCircle } from "react-icons/io";
+import { useGSAPAnimations } from "../../utils/useGSAPAnimation";
 
 const HeroCardTwo = () => {
+  useGSAPAnimations("play-btn", "rotate");
+  useGSAPAnimations("model", "fade", { duration: 2 });
+  useGSAPAnimations("main", "slideUp", { duration: 2 });
+
   return (
-    <div className="flex justify-between p-8 pb-0 brown-gradient w-3/5">
+    <div className="flex justify-between p-8 pb-0 brown-gradient w-3/5 main">
       <div className="flex flex-col items-center">
-        <IoIosPlayCircle className="text-7xl p-1 border rounded-full" />
+        <IoIosPlayCircle className="text-7xl p-1 border rounded-full play-btn" />
         <img
           className="mt-11 pb-6"
           style={{ width: "31%" }}
@@ -20,7 +25,7 @@ const HeroCardTwo = () => {
         </div>
       </div>
 
-      <div className="justify-self-end self-end ">
+      <div className="self-end model">
         <img src="/assets/hero-section/hero-model.png" alt="model" />
       </div>
     </div>

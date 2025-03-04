@@ -9,16 +9,11 @@ import HeroCardTwo from "./HeroCardTwo";
 import { useGSAPAnimations } from "../../utils/useGSAPAnimation";
 
 const HeroSection = () => {
-  const [triggerAnimation, setTriggerAnimation] = useState(false);
-
-  // Trigger the animations when the component mounts
-  useEffect(() => {
-    setTriggerAnimation(true);
-  }, []);
-
   // Applying the effects by class name
   useGSAPAnimations("animate-fade", "fade", { duration: 3 });
   useGSAPAnimations("arrow-slide", "slideDown");
+  useGSAPAnimations("button-container", "slideUp");
+  useGSAPAnimations("link-arrow-btn", "rotate");
 
   return (
     <div className="flex">
@@ -42,13 +37,13 @@ const HeroSection = () => {
               beauty
             </span>
           </h1>
-          <div className="flex justify-center py-2 mt-16">
+          <div className="flex justify-center py-2 mt-16 button-container">
             <BgButton title="find a store" />
-            <LinkArrowButton />
+            <LinkArrowButton className="link-arrow-btn" />
           </div>
         </div>
 
-        <div className="flex w-full h-full justify-center px-8 mt-20">
+        <div className="flex w-full h-full justify-center px-8 mt-20 ">
           <HeroCardOne />
           <HeroCardTwo />
         </div>
@@ -60,17 +55,17 @@ const HeroSection = () => {
           <HeroSwiper />
         </div>
         <Divider />
-        <div>
+        <div className="flex flex-col justify-between">
           <div className="flex items-center mt-12 pl-10">
             <h4 className="text-3xl text-white capitalize m">
               Handpicked
               <br /> Designer Jewellery
             </h4>
-            <div className="ml-4">
-              <LinkArrowButton />
+            <div className="ml-4 ">
+              <LinkArrowButton className="link-arrow-btn" />
             </div>
           </div>
-          <div className="flex justify-center object-contain ">
+          <div className="flex justify-center object-contain items-end">
             <img
               className="w-3/4"
               src="/assets/hero-section/ring-mount.png"
