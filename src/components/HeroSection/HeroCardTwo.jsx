@@ -1,18 +1,21 @@
 import React from "react";
 import { IoIosPlayCircle } from "react-icons/io";
 import { useGSAPAnimations } from "../../utils/useGSAPAnimation";
+import useDeviceType from "../../utils/useDeviceType";
 
 const HeroCardTwo = () => {
   useGSAPAnimations("play-btn", "rotate");
   useGSAPAnimations("model", "fade", { duration: 2 });
   useGSAPAnimations("main", "slideUp", { duration: 2 });
 
+  const deviceType = useDeviceType();
+
   return (
-    <div className="flex justify-between p-8 pb-0 brown-gradient w-3/5 main">
-      <div className="flex flex-col items-center">
+    <div className="flex justify-between p-8 pb-0 brown-gradient w-3/5 main mobile:w-full tablet:flex-col">
+      <div className="flex flex-col items-center tablet:flex-row-reverse tablet:justify-between">
         <IoIosPlayCircle className="text-7xl p-1 border rounded-full play-btn" />
         <img
-          className="mt-11 pb-6"
+          className="mt-11 pb-6 tablet:hidden"
           style={{ width: "31%" }}
           src="/assets/arrow-line.svg"
           alt="arrow"

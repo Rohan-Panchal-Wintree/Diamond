@@ -1,0 +1,12 @@
+.bangle {
+  top: -65%;
+  left: 88%;
+}
+
+/* Media Query for tablet screens (640px to 1024px wide) */
+@media (max-width: 1024px) and (min-width: 640px) {
+  .bangle {
+    top: -40%;
+    left: 90%;
+  }
+}

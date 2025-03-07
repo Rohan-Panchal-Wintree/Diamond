@@ -14,8 +14,8 @@ const SecondSection = () => {
 
   return (
     <div className="p-10 pt-20">
-      <div className="p-5 pt-0 pb-0 brown-gradient flex">
-        <div className=" text-white w-3/6">
+      <div className="p-5 pt-0 pb-0 brown-gradient flex tablet:flex-col">
+        <div className=" text-white w-3/6 tablet:w-full">
           <div className="flex">
             <div className="flex flex-col items-center w-2/5">
               <p className="uppercase text-lg pt-8 pl-8 w-full unleash">
@@ -29,9 +29,9 @@ const SecondSection = () => {
                 alt="arrow"
               />
             </div>
-            <div className="w-6/12 flex">
+            <div className="w-6/12 flex object-contain">
               <img
-                className="self-end model-image"
+                className=" model-image"
                 src="/assets/home-model-2.png"
                 alt="model"
               />
@@ -55,12 +55,15 @@ const SecondSection = () => {
           </div>
         </div>
         {/* second section */}
-        <div className="w-3/6 pl-3">
+        <div className="w-3/6 pl-3 tablet:w-full">
           <div>
-            <h4 className="text-white gilda text-7xl pt-12 animate-fade">
+            <h4 className="text-white gilda text-7xl pt-12 animate-fade tablet:text-8xl">
               Dare to <span className="italic letter">dazzle</span> <br />
               <span className="flex letter">
-                diffrently <AvatarGroup className="ml-5 mt-3" />
+                diffrently{" "}
+                <span className="tablet:flex items-center">
+                  <AvatarGroup className="ml-5 mt-3" />
+                </span>
               </span>
             </h4>
             <div className="text-white mt-10 animate-fade">

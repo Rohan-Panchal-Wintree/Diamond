@@ -7,7 +7,7 @@ const HomeThirdSection = () => {
   return (
     <div>
       <div className="flex justify-between p-8">
-        <h4 className="text-5xl text-Peach-Puff gilda">
+        <h4 className="text-5xl text-Peach-Puff gilda tablet:text-4xl tablet:self-center">
           New <span className="italic">jewellery</span> collections
         </h4>
         <div className="flex items-center">

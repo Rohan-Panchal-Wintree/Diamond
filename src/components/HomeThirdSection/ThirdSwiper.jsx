@@ -4,6 +4,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "../../styles/HeroSection/HeroSwiper.css";
+import useDeviceType from "../../utils/useDeviceType";
 
 const products = [
   {
@@ -45,6 +46,8 @@ const products = [
 ];
 
 const ThirdSwiper = () => {
+  const deviceType = useDeviceType();
+
   return (
     <div className="text-Peach-Puff">
       <Swiper
@@ -54,7 +57,7 @@ const ThirdSwiper = () => {
         }}
         modules={[Pagination, Autoplay]}
         className="mySwiper"
-        slidesPerView={4}
+        slidesPerView={deviceType !== "tablet" ? 4 : 3}
         loop={true}
         autoplay={{
           delay: 3000, // Delay between slides (in ms)
@@ -65,15 +68,15 @@ const ThirdSwiper = () => {
             <SwiperSlide key={index}>
               <div className="mb-14" style={{ backgroundColor: "#F7ECDB" }}>
                 <div className="p-3">
-                  <span className="bg-white text-black rounded-full px-3 py-1 text-lg">
+                  <span className="bg-white text-black rounded-full px-3 py-1 text-lg tablet:text-base">
                     {product.label}
                   </span>
                 </div>
-                <div className="p-3 object-contain">
+                <div className="flex p-3 object-contain">
                   <img src={product.image} alt="title" />
                 </div>
                 <div className="p-4">
-                  <h4 className="capitalize text-black gilda text-2xl pb-3">
+                  <h4 className="capitalize text-black gilda text-2xl pb-3 tablet:text-xl">
                     {product.title}
                   </h4>
                   <hr />

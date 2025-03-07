@@ -44,7 +44,9 @@ const FourthSwiper = () => {
           return (
             <SwiperSlide key={index}>
               <div className="flex items-center mb-4">
-                <h4 className="text-3xl capitalize">{product.title}</h4>
+                <h4 className="text-3xl capitalize tablet:text-2xl">
+                  {product.title}
+                </h4>
                 <div>
                   <LinkArrowButton />
                 </div>

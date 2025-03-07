@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import { useGSAPAnimations } from "../utils/useGSAPAnimation";
 
 const menu = [
-  { title: "Home", link: "#" },
-  { title: "About", link: "#" },
-  { title: "Services", link: "#" },
-  { title: "Contact", link: "#" },
+  { title: "Necklaces", link: "#" },
+  { title: "Bracelets", link: "#" },
+  { title: "Earrings", link: "#" },
+  { title: "Pendants", link: "#" },
 ];
 
 const SidebarDrawer = () => {
@@ -13,6 +14,10 @@ const SidebarDrawer = () => {
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
+
+  useGSAPAnimations("sidebar-link", "slideUp", {
+    duration: 2,
+  });
 
   return (
     <div className="relative p-4">
@@ -45,13 +50,13 @@ const SidebarDrawer = () => {
           backgroundImage: `url("/assets/close-texture-chocolate-color-silk-dark.png")`,
         }}
       >
-        <div className="flex flex-col justify-center h-full pl-12 text-Peach-Puff gilda uppercase space-y-8 ">
+        <div className="flex flex-col justify-center h-full pl-12 text-Peach-Puff gilda uppercase space-y-8">
           {menu.map((item, index) => {
             return (
               <a
                 key={index}
-                href={`#${item.link}`}
-                className="sidebar-link text-8xl"
+                href={`${item.link}`}
+                className="sidebar-link text-8xl hover:italic"
               >
                 {item.title}
               </a>

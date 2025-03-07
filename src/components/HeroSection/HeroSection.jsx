@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { HiArrowLongDown } from "react-icons/hi2";
 import Divider from "../Divider";
 import HeroSwiper from "./HeroSwiper";
@@ -7,8 +7,14 @@ import BgButton from "../BgButton";
 import HeroCardOne from "./HeroCardOne";
 import HeroCardTwo from "./HeroCardTwo";
 import { useGSAPAnimations } from "../../utils/useGSAPAnimation";
+import useDeviceType from "../../utils/useDeviceType";
+import VerticalDivider from "../VerticalDivider";
 
 const HeroSection = () => {
+  // Set up state to track window size
+  const deviceType = useDeviceType();
+  console.log("device type", deviceType);
+
   // Applying the effects by class name
   useGSAPAnimations("animate-fade", "fade", { duration: 3 });
   useGSAPAnimations("arrow-slide", "slideDown");
@@ -16,7 +22,7 @@ const HeroSection = () => {
   useGSAPAnimations("link-arrow-btn", "rotate");
 
   return (
-    <div className="flex">
+    <div className="flex tablet:flex-col mobile:flex-col">
       <div className="flex flex-col justify-center items-center w-full pt-20 text-Peach-Puff">
         <div className="flex flex-col items-center">
           <HiArrowLongDown className="arrow-slide" />
@@ -28,12 +34,15 @@ const HeroSection = () => {
           </span>
         </div>
         <div>
-          <h1 className="text-center text-8xl animate-fade">
+          <h1 className="text-center text-8xl animate-fade mobile:text-6xl">
             <span className="italic">Unleash</span> the
             <br />{" "}
             <span className="flex">
               shining{" "}
-              <img className="mx-2" src="/assets/hero-section/ring.png" />{" "}
+              <img
+                className="ml-2 mobile:w-11 mobile:object-contain"
+                src="/assets/hero-section/ring.png"
+              />
               beauty
             </span>
           </h1>
@@ -43,21 +52,22 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="flex w-full h-full justify-center px-8 mt-20 ">
+        <div className="flex w-full h-full justify-center px-8 mt-20 mobile:flex-col">
           <HeroCardOne />
           <HeroCardTwo />
         </div>
       </div>
 
       {/* Side section */}
-      <div className="bg-Dark-Brown w-4/12">
-        <div className="p-8 swiper-container">
+      <div className="flex flex-col bg-Dark-Brown w-4/12 tablet:w-full tablet:flex-row">
+        <div className="p-8 swiper-container tablet:w-1/2 tablet:p-4 tablet:pb-0">
           <HeroSwiper />
         </div>
-        <Divider />
-        <div className="flex flex-col justify-between">
+        {(deviceType !== "tablet" || deviceType === "mobile") && <Divider />}
+        {deviceType === "tablet" && <VerticalDivider />}
+        <div className="flex flex-col justify-between tablet:w-1/2 grow">
           <div className="flex items-center mt-12 pl-10">
-            <h4 className="text-3xl text-white capitalize m">
+            <h4 className="text-3xl text-white capitalize">
               Handpicked
               <br /> Designer Jewellery
             </h4>
@@ -65,7 +75,7 @@ const HeroSection = () => {
               <LinkArrowButton className="link-arrow-btn" />
             </div>
           </div>
-          <div className="flex justify-center object-contain items-end">
+          <div className="flex justify-center">
             <img
               className="w-3/4"
               src="/assets/hero-section/ring-mount.png"
