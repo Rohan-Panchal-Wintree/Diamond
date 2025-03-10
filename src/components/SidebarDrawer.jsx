@@ -56,7 +56,7 @@ const SidebarDrawer = () => {
               <a
                 key={index}
                 href={`${item.link}`}
-                className="sidebar-link text-8xl hover:italic"
+                className="sidebar-link text-8xl hover:italic mobile:text-5xl"
               >
                 {item.title}
               </a>

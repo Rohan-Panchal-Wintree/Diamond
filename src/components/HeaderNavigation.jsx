@@ -19,7 +19,10 @@ const HeaderNavigation = () => {
             <li className="px-6 uppercase font-thin">shop</li>
           </ul>
         )}
-        <div>{/* <SidebarDrawer /> */}</div>
+        <div>
+          {" "}
+          <SidebarDrawer />{" "}
+        </div>
       </nav>
     </Fragment>
   );

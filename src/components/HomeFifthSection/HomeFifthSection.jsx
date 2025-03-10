@@ -136,7 +136,7 @@ const HomeFifthSection = () => {
           style={{
             position: "absolute",
             left: "10%",
-            top: `${deviceType === "mobile" ? "38%" : "0"}`,
+            top: `${deviceType === "mobile" ? "38%" : "50%"}`,
           }}
           className="mobile:w-4"
           src="/assets/single-sparkle.svg"
