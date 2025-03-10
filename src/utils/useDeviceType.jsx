@@ -6,7 +6,6 @@ const useDeviceType = () => {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      console.log("Window width:", width); // Log width to verify the value
 
       // Define breakpoints based on window width
       if (width <= 639) {

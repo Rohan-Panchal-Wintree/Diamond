@@ -13,7 +13,6 @@ import VerticalDivider from "../VerticalDivider";
 const HeroSection = () => {
   // Set up state to track window size
   const deviceType = useDeviceType();
-  console.log("device type", deviceType);
 
   // Applying the effects by class name
   useGSAPAnimations("animate-fade", "fade", { duration: 3 });
