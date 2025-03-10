@@ -54,3 +54,14 @@
 .swiper-pagination-bullet-active {
   background-color: #fff; /* Change to your desired active color */
 }
+
+/* Mobile Devices */
+@media screen and (max-width: 768px) {
+  .swiper-slide {
+    padding: 0;
+  }
+}
+
+/* Tablet Devices */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+}

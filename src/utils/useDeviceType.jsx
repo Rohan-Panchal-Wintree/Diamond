@@ -6,11 +6,12 @@ const useDeviceType = () => {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      //   console.log("Window width:", width); // Log width to verify the value
+      console.log("Window width:", width); // Log width to verify the value
 
       // Define breakpoints based on window width
       if (width <= 639) {
         setDeviceType("mobile");
+        console.log("setted to mobile version");
       } else if (width > 639 && width <= 1024) {
         setDeviceType("tablet");
       }

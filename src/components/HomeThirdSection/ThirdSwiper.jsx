@@ -57,7 +57,9 @@ const ThirdSwiper = () => {
         }}
         modules={[Pagination, Autoplay]}
         className="mySwiper"
-        slidesPerView={deviceType !== "tablet" ? 4 : 3}
+        slidesPerView={
+          deviceType === "mobile" ? 2 : deviceType === "tablet" ? 3 : 4
+        }
         loop={true}
         autoplay={{
           delay: 3000, // Delay between slides (in ms)

@@ -17,13 +17,28 @@ const SecondSwiper = () => {
         modules={[Pagination, Autoplay]}
         className="mySwiper"
         slidesPerView={1}
-        loop={true}
+        // loop={true}
         autoplay={{
           delay: 3000, // Delay between slides (in ms)
-          // disableOnInteraction: false, // Keep autoplay even after interaction (e.g., slide clicks)
         }}
       >
         <SwiperSlide>
+          <div className="flex pb-4 mobile:flex-col">
+            <div className="w-40 mobile:w-32">
+              <img src="/assets/Earings.png" alt="earrings" />
+            </div>
+            <div className="pl-4">
+              <h4 className="text-2xl mb-5 mobile:text-xl">
+                We're crafting personalised{" "}
+                <span className="italic gilda">Memories </span>
+                since 1964
+              </h4>
+              <UnderlineButton title="view collection" />
+            </div>
+          </div>
+        </SwiperSlide>
+
+        {/* <SwiperSlide>
           <div className="flex pb-4">
             <div className="w-40">
               <img src="/assets/Earings.png" alt="earrings" />
@@ -53,23 +68,7 @@ const SecondSwiper = () => {
               <UnderlineButton title="view collection" />
             </div>
           </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className="flex pb-4">
-            <div className="w-40">
-              <img src="/assets/Earings.png" alt="earrings" />
-            </div>
-            <div className="pl-4">
-              <h4 className="text-2xl mb-5">
-                We're crafting personalised{" "}
-                <span className="italic gilda">Memories </span>
-                since 1964
-              </h4>
-              <UnderlineButton title="view collection" />
-            </div>
-          </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
       </Swiper>
     </div>
   );

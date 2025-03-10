@@ -10,3 +10,11 @@
     left: 90%;
   }
 }
+
+@media only screen and (max-width: 480px) {
+  /* Styles for mobile phones */
+  .bangle {
+    top: -40%;
+    left: 90%;
+  }
+}

@@ -28,13 +28,15 @@ const HeroSection = () => {
           <HiArrowLongDown className="arrow-slide" />
           <span
             className="uppercase text-xs mb-7 mt-6 animate-fade"
-            style={{ letterSpacing: "5px" }}
+            style={{
+              letterSpacing: `${deviceType === "mobile" ? "2px" : "5px"}`,
+            }}
           >
             exquiste cratmanship
           </span>
         </div>
         <div>
-          <h1 className="text-center text-8xl animate-fade mobile:text-6xl">
+          <h1 className="text-center text-8xl animate-fade mobile:text-5xl">
             <span className="italic">Unleash</span> the
             <br />{" "}
             <span className="flex">
@@ -59,12 +61,11 @@ const HeroSection = () => {
       </div>
 
       {/* Side section */}
-      <div className="flex flex-col bg-Dark-Brown w-4/12 tablet:w-full tablet:flex-row">
+      <div className="flex flex-col bg-Dark-Brown w-4/12 tablet:w-full tablet:flex-row mobile:w-full">
         <div className="p-8 swiper-container tablet:w-1/2 tablet:p-4 tablet:pb-0">
           <HeroSwiper />
         </div>
-        {(deviceType !== "tablet" || deviceType === "mobile") && <Divider />}
-        {deviceType === "tablet" && <VerticalDivider />}
+        {deviceType === "tablet" ? <VerticalDivider /> : <Divider />}
         <div className="flex flex-col justify-between tablet:w-1/2 grow">
           <div className="flex items-center mt-12 pl-10">
             <h4 className="text-3xl text-white capitalize">
