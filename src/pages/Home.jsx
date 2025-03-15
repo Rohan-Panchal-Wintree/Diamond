@@ -10,28 +10,28 @@ const Home = () => {
     <Fragment>
       <div
         className="home"
-        style={{ backgroundImage: `url("assets/brown-luxury-fabric.png")` }}
+        style={{ backgroundImage: `url("assets/white-luxury-fabric.jpg")` }}
       >
         <HeroSection />
       </div>
       <div
         className="home-second-section"
         style={{
-          backgroundImage: `url("assets/abstract-background-luxury-cloth-liquid-wave.png")`,
+          backgroundImage: `url("assets/white-luxury-fabric.jpg")`,
         }}
       >
         <SecondSection />
       </div>
       <div
         style={{
-          backgroundImage: `url("/assets/home-third-section.png")`,
+          backgroundImage: `url("/assets/home-third-section-white.jpg")`,
           backgroundSize: "cover",
         }}
       >
         <HomeThirdSection />
-        <hr style={{ border: "1px solid #3E241D" }} />
+        <hr className="border-t border-Medium-Gray" />
         <HomeFourthSection />
-        <hr style={{ border: "1px solid #3E241D" }} />
+        <hr className="border-t border-Medium-Gray" />
         <HomeFifthSection />
       </div>
     </Fragment>

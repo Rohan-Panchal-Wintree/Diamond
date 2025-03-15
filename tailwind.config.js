@@ -6,6 +6,9 @@ export default {
       colors: {
         "Peach-Puff": "#F6CDB0",
         "Dark-Brown": "#211313",
+        "Light-Gray": "#e0e0e0",
+        "Medium-Gray": "#828282",
+        "Charcoal-Gray": "#2C2C2C",
       },
       screens: {
         mobile: { max: "639px" }, // Max mobile (screens smaller than 640px)

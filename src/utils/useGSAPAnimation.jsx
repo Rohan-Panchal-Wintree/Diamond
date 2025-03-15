@@ -89,6 +89,20 @@ export const useGSAPAnimations = (className, effectType, options = {}) => {
               );
               break;
 
+            // Add the floating effect here
+            case "float":
+              gsap.fromTo(
+                element,
+                { y: "-10px", opacity: 1 }, // Start at the initial position
+                {
+                  y: "0px", // Float upwards by 10px
+                  opacity: 1,
+                  ease: "power1.inOut", // Smooth easing
+                  ...options, // Spread additional options
+                }
+              );
+              break;
+
             default:
               console.warn(`Unknown effect type: ${effectType}`);
           }

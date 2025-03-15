@@ -19,10 +19,16 @@ const HeroSection = () => {
   useGSAPAnimations("arrow-slide", "slideDown");
   useGSAPAnimations("button-container", "slideUp");
   useGSAPAnimations("link-arrow-btn", "rotate");
+  useGSAPAnimations("diamond", "float", {
+    duration: 1.5,
+    repeat: -1,
+    yoyo: true,
+  });
 
   return (
     <div className="flex tablet:flex-col mobile:flex-col">
-      <div className="flex flex-col justify-center items-center w-full pt-20 text-Peach-Puff">
+      {/* <div className="flex flex-col justify-center items-center w-full pt-20 text-Peach-Puff "> */}
+      <div className="flex flex-col justify-center items-center w-full pt-20 text-Charcoal-Gray">
         <div className="flex flex-col items-center">
           <HiArrowLongDown className="arrow-slide" />
           <span
@@ -41,14 +47,14 @@ const HeroSection = () => {
             <span className="flex">
               shining{" "}
               <img
-                className="ml-2 mobile:w-11 mobile:object-contain"
-                src="/assets/hero-section/ring.png"
+                className="ml-2 mobile:w-11 mobile:object-contain w-28 mt-4 mobile:mt-0 diamond"
+                src="/assets/hero-section/hero-diamond.png"
               />
               beauty
             </span>
           </h1>
           <div className="flex justify-center py-2 mt-16 button-container">
-            <BgButton title="find a store" />
+            <BgButton title="Discover More" />
             <LinkArrowButton className="link-arrow-btn" />
           </div>
         </div>
@@ -60,16 +66,16 @@ const HeroSection = () => {
       </div>
 
       {/* Side section */}
-      <div className="flex flex-col bg-Dark-Brown w-4/12 tablet:w-full tablet:flex-row mobile:w-full">
+      <div className="flex flex-col bg-Light-Gray w-4/12 tablet:w-full tablet:flex-row mobile:w-full">
         <div className="p-8 swiper-container tablet:w-1/2 tablet:p-4 tablet:pb-0">
           <HeroSwiper />
         </div>
         {deviceType === "tablet" ? <VerticalDivider /> : <Divider />}
         <div className="flex flex-col justify-between tablet:w-1/2 grow">
           <div className="flex items-center mt-12 pl-10">
-            <h4 className="text-3xl text-white capitalize">
-              Handpicked
-              <br /> Designer Jewellery
+            <h4 className="text-3xl text-Charcoal-Gray capitalize">
+              Curated Lab
+              <br /> Grown Diamonds
             </h4>
             <div className="ml-4 ">
               <LinkArrowButton className="link-arrow-btn" />
@@ -78,8 +84,8 @@ const HeroSection = () => {
           <div className="flex justify-center">
             <img
               className="w-3/4"
-              src="/assets/hero-section/ring-mount.png"
-              alt="ring-mount"
+              src="/assets/hero-section/diamond-mount.png"
+              alt="diamond-mount"
             />
           </div>
         </div>

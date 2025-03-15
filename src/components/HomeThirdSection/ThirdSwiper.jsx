@@ -8,39 +8,33 @@ import useDeviceType from "../../utils/useDeviceType";
 
 const products = [
   {
-    label: "Ring",
-    image: "/assets/HomeCardsSwiper/HomeCardRing.png",
-    title: "crystal pear ring",
+    label: "Triad",
+    image: "/assets/HomeCardsSwiper/Diamond 1.png",
+    title: "Triangle Radiance",
     price: "96",
   },
   {
-    label: "Earring",
-    image: "/assets/HomeCardsSwiper/HomeCardEarring.png",
-    title: "crystal pear Earring",
+    label: "Eternity",
+    image: "/assets/HomeCardsSwiper/Diamond 2.png",
+    title: "Celestial Circle",
     price: "96",
   },
   {
-    label: "Ring",
-    image: "/assets/HomeCardsSwiper/HomeCardRing.png",
-    title: "crystal pear ring",
+    label: "Radiance",
+    image: "/assets/HomeCardsSwiper/Diamond 3.png",
+    title: "Radiant Squareg",
     price: "96",
   },
   {
-    label: "Earring",
-    image: "/assets/HomeCardsSwiper/HomeCardEarring.png",
-    title: "crystal pear Earring",
+    label: "Embrace",
+    image: "/assets/HomeCardsSwiper/Diamond 4.png",
+    title: "Heart’s Desire",
     price: "96",
   },
   {
-    label: "Ring",
-    image: "/assets/HomeCardsSwiper/HomeCardRing.png",
-    title: "crystal pear ring",
-    price: "96",
-  },
-  {
-    label: "Earring",
-    image: "/assets/HomeCardsSwiper/HomeCardEarring.png",
-    title: "crystal pear Earring",
+    label: "Eternity",
+    image: "/assets/HomeCardsSwiper/Diamond 2.png",
+    title: "Celestial Circle",
     price: "96",
   },
 ];
@@ -68,7 +62,7 @@ const ThirdSwiper = () => {
         {products.map((product, index) => {
           return (
             <SwiperSlide key={index}>
-              <div className="mb-14" style={{ backgroundColor: "#F7ECDB" }}>
+              <div className="mb-14 bg-Light-Gray">
                 <div className="p-3">
                   <span className="bg-white text-black rounded-full px-3 py-1 text-lg tablet:text-base">
                     {product.label}
@@ -81,10 +75,12 @@ const ThirdSwiper = () => {
                   <h4 className="capitalize text-black gilda text-2xl pb-3 tablet:text-xl">
                     {product.title}
                   </h4>
-                  <hr />
+                  <hr className="border-t border-Medium-Gray" />
                   <div className="flex justify-between pt-3">
                     <p className="text-xl text-black gilda">${product.price}</p>
-                    <button className=" px-3 text-black border ">+</button>
+                    <button className=" px-3 text-black border border-Medium-Gray flex items-center rounded">
+                      +
+                    </button>
                   </div>
                 </div>
               </div>

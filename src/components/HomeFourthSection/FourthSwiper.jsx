@@ -8,25 +8,28 @@ import LinkArrowButton from "../LinkArrowButton";
 
 const products = [
   {
-    image: "/assets/HomeCardsSwiper/HomeCardRing.png",
-    title: "Explore handmade bracelets",
-    description: "Will generally retain its value as a prescious metal it.",
+    image: "/assets/HomeCardsSwiper/Sustainability.svg",
+    title: "Sustainability and Eco-Friendliness",
+    description:
+      "Lab-grown diamonds reduce environmental impact and promote sustainability.",
   },
   {
-    image: "/assets/HomeCardsSwiper/HomeCardRing.png",
-    title: "Explore handmade bracelets",
-    description: "Will generally retain its value as a prescious metal it.",
+    image: "/assets/HomeCardsSwiper/Quality.svg",
+    title: "High Quality and Precision",
+    description:
+      "Crafted with precision, lab-grown diamonds offer brilliance and fewer imperfections.",
   },
   {
-    image: "/assets/HomeCardsSwiper/HomeCardRing.png",
-    title: "Explore handmade bracelets",
-    description: "Will generally retain its value as a prescious metal it.",
+    image: "/assets/HomeCardsSwiper/Ethical.svg",
+    title: "Ethical and Conflict-Free",
+    description:
+      "Lab-grown diamonds are conflict-free and ethically made without mining.",
   },
 ];
 
 const FourthSwiper = () => {
   return (
-    <div className="text-Peach-Puff">
+    <div className="text-Charcoal-Gray">
       <Swiper
         pagination={{
           clickable: true,
@@ -53,7 +56,7 @@ const FourthSwiper = () => {
               </div>
               <div className="p-4 pl-0 pb-10 mt-6">
                 <div className="w-6">
-                  <img src="/assets/plus.svg" alt="plus" />
+                  <img src={product.image} alt="plus" />
                 </div>
                 <p className="mt-2 max-w-xs">{product.description}</p>
               </div>

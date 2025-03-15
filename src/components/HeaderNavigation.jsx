@@ -8,7 +8,7 @@ const HeaderNavigation = () => {
 
   return (
     <Fragment>
-      <nav className="flex justify-between items-center p-6 px-10 text-white">
+      <nav className="flex justify-between items-center p-6 px-10 text-Charcoal-Gray">
         <div className="text-2xl gilda">Sapphire</div>
         {deviceType === "mobile" ? (
           ""

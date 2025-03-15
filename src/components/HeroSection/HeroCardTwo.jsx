@@ -11,19 +11,18 @@ const HeroCardTwo = () => {
   const deviceType = useDeviceType();
 
   return (
-    <div className="flex justify-between p-8 pb-0 brown-gradient w-3/5 main tablet:flex-col mobile:w-full mobile:flex-col mobile:mt-4">
+    <div className="flex justify-between p-8 pb-0 gray-gradient w-3/5 main tablet:flex-col mobile:w-full mobile:flex-col mobile:mt-4">
       <div className="flex flex-col items-center tablet:flex-row-reverse tablet:justify-between mobile:flex-row-reverse mobile:justify-between">
-        <IoIosPlayCircle className="text-7xl p-1 border rounded-full play-btn" />
+        <IoIosPlayCircle className="text-7xl p-1 border text-Light-Gray rounded-full play-btn" />
         <img
           className="mt-11 pb-6 tablet:hidden mobile:hidden"
           style={{ width: "31%" }}
-          src="/assets/arrow-line.svg"
+          src="/assets/arrow-line-gray.svg"
           alt="arrow"
         />
         <div className="uppercase">
-          <p className="text-xl pb-4 font-semibold">
-            18k gold
-            <br /> plated
+          <p className="text-xl pb-4 font-semibold tablet:text-white mobile:text-white">
+            Radiant Finish
           </p>
         </div>
       </div>

@@ -1,5 +1,7 @@
 .swiper-container {
-  background-image: radial-gradient(circle, #54231d 10%, #211313 70%);
+  /* background-image: radial-gradient(circle, #54231d 10%, #211313 70%); */
+  /* background-image: radial-gradient(circle, #b6b6b6 30%, #949494 70%); */
+  background-image: radial-gradient(circle, #fff 30%, #e0e0e0 70%);
 }
 
 .swiper {
