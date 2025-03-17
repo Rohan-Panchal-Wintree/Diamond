@@ -72,7 +72,7 @@ const ThirdSwiper = () => {
                   <img src={product.image} alt="title" />
                 </div>
                 <div className="p-4">
-                  <h4 className="capitalize text-black gilda text-2xl pb-3 tablet:text-xl">
+                  <h4 className="capitalize text-black gilda text-2xl pb-3 tablet:text-xl mobile:text-lg">
                     {product.title}
                   </h4>
                   <hr className="border-t border-Medium-Gray" />

@@ -43,9 +43,9 @@ const SecondSwiper = () => {
           delay: 3000, // Delay between slides (in ms)
         }}
       >
-        {slideData.map((slide) => {
+        {slideData.map((slide, index) => {
           return (
-            <SwiperSlide>
+            <SwiperSlide key={index}>
               <div className="flex pb-4 mobile:flex-col">
                 <div className="w-40 mobile:w-32">
                   <img
