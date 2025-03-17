@@ -26,7 +26,7 @@ const HeroCardTwo = () => {
         </div>
       </div>
 
-      <div className="flex h-3/4 self-center tablet:w-3/4 tablet:h-3/4 mobile:h-72">
+      <div className="flex smallLaptop:w-3/4 h-3/4 self-center tablet:w-3/4 tablet:h-3/4 mobile:h-72">
         {/* <div className="flex self-end model"> */}
         {/* <img src="/assets/hero-section/hero-model.png" alt="model" /> */}
         <Scene />

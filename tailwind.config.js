@@ -13,6 +13,7 @@ export default {
       screens: {
         mobile: { max: "639px" }, // Max mobile (screens smaller than 640px)
         tablet: { min: "640px", max: "1024px" }, // Tablet (screens 640px and above)
+        smallLaptop: { min: "1025px", max: "1400px" },
       },
     },
   },
