@@ -63,7 +63,7 @@ const HomeFourthSection = () => {
           <div className="p-4 w-full flex items-center">
             <h4 className="gilda leading-none text-6xl text-Charcoal-Gray word tablet:text-5xl mobile:text-3xl">
               <span className="italic">Radiance </span> that <br />
-              <span className="pl-20 smallLaptop:pl-14 tablet:pl-14 mobile:pl-10">
+              <span className="pl-20 smallLaptop:pl-12 tablet:pl-14 mobile:pl-10">
                 captures attention
               </span>
             </h4>
