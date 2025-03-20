@@ -1,7 +1,12 @@
-import React from "react";
+import React, { Fragment } from "react";
+import AboutFirstSection from "../components/AboutFirstSection/AboutFirstSection";
 
 const About = () => {
-  return <div>About</div>;
+  return (
+    <Fragment>
+      <AboutFirstSection />
+    </Fragment>
+  );
 };
 
 export default About;

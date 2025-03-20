@@ -3,6 +3,9 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import RootLayout from "./components/RootLayout";
+import Shop from "./pages/Shop";
+import ContactUs from "./pages/ContactUs";
+import NotFound from "./pages/NotFound";
 
 const routes = [
   {
@@ -14,8 +17,20 @@ const routes = [
         element: <Home />,
       },
       {
-        path: "/about",
+        path: "/about-us",
         element: <About />,
+      },
+      {
+        path: "/shop",
+        element: <Shop />,
+      },
+      {
+        path: "/contact-us",
+        element: <ContactUs />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
       },
     ],
   },

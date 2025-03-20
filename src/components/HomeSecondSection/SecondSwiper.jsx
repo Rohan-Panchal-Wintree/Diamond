@@ -62,7 +62,7 @@ const SecondSwiper = () => {
                     </span>
                     {slide.end}
                   </h4>
-                  <UnderlineButton title="view collection" />
+                  <UnderlineButton title="Know more" link="/about-us" />
                 </div>
               </div>
             </SwiperSlide>

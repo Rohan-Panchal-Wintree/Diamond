@@ -7,8 +7,6 @@ const useDeviceType = () => {
     const handleResize = () => {
       const width = window.innerWidth;
 
-      console.log("inner width", width);
-
       // Define breakpoints based on window width
       if (width <= 639) {
         setDeviceType("mobile");

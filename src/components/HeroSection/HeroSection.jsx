@@ -54,7 +54,7 @@ const HeroSection = () => {
             </span>
           </h1>
           <div className="flex justify-center py-2 mt-16 button-container">
-            <BgButton title="Discover More" />
+            <BgButton title="Discover More" link="/about-us" />
             <LinkArrowButton className="link-arrow-btn" />
           </div>
         </div>

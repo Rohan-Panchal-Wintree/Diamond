@@ -11,7 +11,6 @@ export function Model(props) {
   const meshRef = useRef();
 
   const deviceType = useDeviceType();
-  console.log("deviceType", deviceType);
 
   let scale, rotationSpeed;
 

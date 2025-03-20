@@ -75,13 +75,13 @@ const ThirdSwiper = () => {
                   <h4 className="capitalize text-black gilda text-2xl pb-3 tablet:text-xl mobile:text-lg">
                     {product.title}
                   </h4>
-                  <hr className="border-t border-Medium-Gray" />
+                  {/* <hr className="border-t border-Medium-Gray" />
                   <div className="flex justify-between pt-3">
                     <p className="text-xl text-black gilda">${product.price}</p>
                     <button className=" px-3 text-black border border-Medium-Gray flex items-center rounded">
                       +
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </SwiperSlide>

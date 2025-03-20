@@ -22,7 +22,7 @@ const HeroCardOne = () => {
         </p>
       </div>
       <div className="mt-10 button">
-        <UnderlineButton title="learn More" />
+        <UnderlineButton title="Contact us" />
       </div>
     </div>
   );

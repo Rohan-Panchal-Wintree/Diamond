@@ -28,7 +28,11 @@ const HomeFourthSection = () => {
           <h4 className="capitalize text-2xl text-Charcoal-Gray pt-3">
             Diamonds with Integrity
           </h4>
-          <UnderlineButton title="shop now" className="mt-12" />
+          <UnderlineButton
+            title="get in touch"
+            link="/contact-us"
+            className="mt-12"
+          />
         </div>
         {deviceType !== "tablet" && <Divider />}
         {deviceType === "tablet" && <VerticalDivider />}

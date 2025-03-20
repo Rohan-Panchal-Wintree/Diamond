@@ -29,9 +29,11 @@ const HomeFifthSection = () => {
         <div className="w-6/12 text-Charcoal-Gray px-4 tablet:flex tablet:w-full mobile:w-full">
           <div className="tablet:self-center">
             <h4 className="relative gilda text-3xl inline capitalize">
-              sapphire
+              {/* sapphire */}
+              APG diamonds
               <img
-                className="absolute -top-2 -right-6 w-1/5 sparkle"
+                // className="absolute -top-2 -right-6 w-1/5 sparkle"
+                className="absolute -top-6 -right-10 w-1/5 sparkle"
                 src="/assets/single-sparkle.svg"
                 alt="sparkle"
               />
@@ -105,7 +107,7 @@ const HomeFifthSection = () => {
         </div>
         <div className="flex items-center p-4 tablet:order-1 mobile:order-1">
           <div className="flex mt-7">
-            <BgButton title="contact us" />
+            <BgButton title="contact us" link="/contact-us" />
             <LinkArrowButton />
           </div>
         </div>
