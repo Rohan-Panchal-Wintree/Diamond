@@ -1,7 +1,6 @@
 import React from "react";
 import { IoIosPlayCircle } from "react-icons/io";
 import { useGSAPAnimations } from "../../utils/useGSAPAnimation";
-import useDeviceType from "../../utils/useDeviceType";
 import Scene from "../3dModel/Scene";
 
 const HeroCardTwo = () => {

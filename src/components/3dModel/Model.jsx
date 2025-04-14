@@ -40,7 +40,7 @@ export function Model(props) {
 
   return (
     <group {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]}>
+      <group rotation={[-Math.PI / 2, 0, 0]}>
         <mesh
           ref={meshRef}
           castShadow

@@ -20,15 +20,14 @@ const HeaderNavigation = () => {
           <a href="/">
             {/* APG diamonds */}
             <img
-              className="w-32 mobile:w-24"
-              src="/assets/APG_DIAMONDS_LOGO_BLACK.png"
+              className="w-48 mobile:w-24"
+              // src="/assets/APG_DIAMONDS_LOGO_BLACK.png"
+              src="/assets/apgdiamonds-logo-black.svg"
               alt="logo"
             />
           </a>
         </div>
-        {deviceType === "mobile" ? (
-          ""
-        ) : (
+        {deviceType === "mobile" ? null : (
           <ul className="flex">
             {menu.map((menuItem, index) => {
               return (
