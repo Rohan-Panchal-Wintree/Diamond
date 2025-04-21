@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAPAnimations } from "../../utils/useGSAPAnimation";
-// import "./AboutSecondSection.css"; // Create this file if you don't have it
+import useDeviceType from "../../utils/useDeviceType";
 
-gsap.registerPlugin(ScrollTrigger);
+if (!gsap.core.globals().ScrollTrigger) {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 const AboutThirdSection = () => {
   const [contentIndex, setContentIndex] = useState(0);
@@ -12,7 +13,7 @@ const AboutThirdSection = () => {
   const contentWrapperRef = useRef(null);
   const contentRefs = useRef([]); // To store refs for each slide
 
-  useGSAPAnimations();
+  const deviceType = useDeviceType();
 
   const leftContent = [
     {
@@ -33,7 +34,7 @@ const AboutThirdSection = () => {
       title: "Chemical Vapour Deposition (CVD) Diamonds",
       structure: (
         <div>
-          <p>
+          <p className="tablet:text-[15px]">
             Chemical Vapour Deposition (CVD) is an advanced process used to
             create lab-grown CVD diamonds. These diamonds are becoming
             increasingly popular, especially in places like Dubai, due to their
@@ -165,32 +166,41 @@ const AboutThirdSection = () => {
   }, [contentIndex]); // This will run every time the contentIndex changes
 
   useEffect(() => {
-    const pin = gsap.to(sectionRef.current, {
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        pin: true,
-        start: "top top",
-        end: () =>
-          `+=${contentWrapperRef.current.scrollWidth - window.innerWidth}`,
-        scrub: true,
-        onUpdate: (self) => {
-          const progress = self.progress * (leftContent.length - 1);
-          const index = Math.round(progress);
-          setContentIndex(index); // Update the contentIndex as you scroll
-        },
+    if (!deviceType || deviceType === "mobile" || deviceType === "tablet")
+      return;
+
+    const trigger = ScrollTrigger.create({
+      trigger: sectionRef.current,
+      pin: true,
+      start: "top top",
+      end: () =>
+        `${
+          contentWrapperRef.current.scrollWidth - sectionRef.current.offsetWidth
+        }`,
+      scrub: true,
+      onUpdate: (self) => {
+        const progress = self.progress * (leftContent.length - 1);
+        const index = Math.round(progress);
+        setContentIndex(index);
       },
     });
 
     return () => {
-      pin.kill();
+      trigger?.kill();
     };
-  }, [leftContent.length]);
+  }, [deviceType, leftContent.length]);
+
+  // Ensure ScrollTrigger recalculates after screen resize/device type change
+  useEffect(() => {
+    const timeout = setTimeout(() => ScrollTrigger.refresh(), 300);
+    return () => clearTimeout(timeout);
+  }, [deviceType]);
 
   return (
-    <div className="relative ">
+    <div className="relative border overflow-hidden">
       <section
         ref={sectionRef}
-        className="relative w-full h-screen overflow-hidden"
+        className="relative w-full h-screen tablet:h-auto tablet:max-h-max mobile:h-auto mobile:max-h-max"
       >
         {/* <h4 className="text-center text-xl font-light">
           Understanding the{" "}
@@ -198,19 +208,33 @@ const AboutThirdSection = () => {
         </h4> */}
         <div
           ref={contentWrapperRef}
-          className="relative flex h-full"
-          style={{ width: `${leftContent.length * 100}vw` }}
+          className={`relative flex tablet:flex-col h-auto mobile:flex-col`}
+          // style={{ width: `${leftContent.length * 100}vw` }}
+          style={
+            deviceType === "tablet"
+              ? { width: "100%" }
+              : deviceType === "mobile"
+              ? { width: "100%" }
+              : { width: `${leftContent.length * 100}vw` }
+          }
         >
           {leftContent.map((text, index) => {
             return (
               <div
                 key={index}
-                className={`w-screen flex items-center justify-center transition-opacity duration-300`}
-                style={{
-                  opacity: contentIndex === index ? 1 : 0, // Fade out the other content
-                  display: contentIndex === index ? "flex" : "none", // Hide content when it doesn't match the current index
-                  pointerEvents: contentIndex === index ? "auto" : "none", // Prevent interaction with hidden content
-                }}
+                // className={`w-screen flex tablet:flex-col items-center justify-center transition-opacity duration-300`}
+                className={`w-screen tablet:w-full flex tablet:flex-col items-center justify-center transition-opacity duration-300 tablet:p-10 border-b border-Light-Gray mobile:w-full mobile:flex-col-reverse`}
+                style={
+                  deviceType === "tablet"
+                    ? {}
+                    : deviceType === "mobile"
+                    ? {}
+                    : {
+                        opacity: contentIndex === index ? 1 : 0, // Fade out the other content
+                        display: contentIndex === index ? "flex" : "none", // Hide content when it doesn't match the current index
+                        pointerEvents: contentIndex === index ? "auto" : "none", // Prevent interaction with hidden content
+                      }
+                }
               >
                 {/* Left content (Text) */}
                 <div
@@ -220,10 +244,21 @@ const AboutThirdSection = () => {
                       leftContent: el,
                     })
                   }
-                  className="w-1/2 p-10 pr-28"
+                  className="w-1/2 tablet:w-full p-10 pr-28 tablet:pr-10 tablet:pl-0 mobile:w-full mobile:px-7"
                 >
+                  {deviceType === "tablet" ? (
+                    ""
+                  ) : deviceType === "mobile" ? (
+                    ""
+                  ) : (
+                    <div className="bg-Light-Gray inline-block mb-5 p-1 px-4 rounded-full">
+                      <p className="text-xl gilda">
+                        {index + 1} / {leftContent.length}
+                      </p>
+                    </div>
+                  )}
                   {/* <p className="mb-2">About</p> */}
-                  <h2 className="text-5xl gilda mb-4 text-Charcoal-Gray ">
+                  <h2 className="text-5xl gilda mb-4 text-Charcoal-Gray tablet:text-4xl mobile:text-4xl">
                     {text.title}
                   </h2>
                   {/*<p className="text-xl">{text.description}</p> */}
@@ -238,12 +273,12 @@ const AboutThirdSection = () => {
                       rightContent: el,
                     })
                   }
-                  className="w-1/2 flex justify-center items-center"
+                  className="w-1/2 tablet:w-full flex justify-center items-center tablet:justify-start mobile:w-[90%]"
                 >
                   <img
                     src={rightImages[index]}
                     alt={`Image ${index + 1}`}
-                    className="object-contain"
+                    className="object-contain tablet:w-full tablet:max-w-[55%] tablet:rounded-xl mobile:w-full"
                   />
                 </div>
               </div>

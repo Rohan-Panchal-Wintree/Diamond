@@ -19,17 +19,22 @@ function App() {
       console.log(`Page Loaded In ${loadTime} ms`);
     };
 
-    window.onload = handleWindowLoad;
+    if (document.readyState === "complete") {
+      setIsLoading(false);
+    } else {
+      window.addEventListener("load", handleWindowLoad);
+    }
 
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.onload = null;
-    };
+    return () => window.removeEventListener("load", handleWindowLoad);
   }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <Fragment>
-      {isLoading ? <Loader /> : <RouterProvider router={router} />}
+      <RouterProvider router={router} />
     </Fragment>
   );
 }

@@ -55,6 +55,37 @@ h1 {
   );
 }
 
+.marquee {
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circular-text-wrapper {
+  animation: spin 10s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 ::selection {
   background-color: #b7b5b5; /* 18K Gold background color */
   color: #000; /* Dark text color for contrast */

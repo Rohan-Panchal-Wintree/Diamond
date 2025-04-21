@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const useDeviceType = () => {
-  const [deviceType, setDeviceType] = useState("");
+  const [deviceType, setDeviceType] = useState("desktop");
 
   useEffect(() => {
     const handleResize = () => {
@@ -10,9 +10,11 @@ const useDeviceType = () => {
       // Define breakpoints based on window width
       if (width <= 639) {
         setDeviceType("mobile");
-        console.log("setted to mobile version");
+        // console.log("setted to mobile version");
       } else if (width > 639 && width <= 1024) {
         setDeviceType("tablet");
+      } else {
+        setDeviceType("desktop");
       }
     };
 

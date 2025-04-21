@@ -1,25 +1,33 @@
 import React, { Fragment } from "react";
-import BgButton from "../BgButton";
-import LinkArrowButton from "../LinkArrowButton";
 import { useGSAPAnimations } from "../../utils/useGSAPAnimation";
 import { useNavigate } from "react-router-dom";
+import useDeviceType from "../../utils/useDeviceType";
 
 const AboutSecondSection = () => {
-  useGSAPAnimations("Exquisite-Diamond", "fade");
+  const deviceType = useDeviceType();
+  console.log("device type is:", deviceType);
+  const navigate = useNavigate();
+
+  useGSAPAnimations("Exquisite-Diamond", "fade", { duration: 1 });
   useGSAPAnimations("Timeless", "slideUp", { duration: 2 });
   useGSAPAnimations("AboutSecondDesc", "slideUp", { duration: 4 });
-
-  const navigate = useNavigate();
 
   return (
     <Fragment>
       <div
         // className="h-screen p-8 bg-gray-100"
-        className="h-screen bg-gray-100"
+        className="h-screen bg-gray-100 tablet:h-[60vh] mobile:h-screen"
         style={{
           // backgroundImage: `url("assets/about-second-section-frabric-white.jpg")`,
-          backgroundImage: `url("/assets/Frame 174.png")`,
-          backgroundSize: "contain",
+          backgroundImage: `url("${
+            deviceType === "mobile"
+              ? "/assets/Frame 174-mobile.png"
+              : deviceType === "tablet"
+              ? "/assets/Frame 174-tablet.png"
+              : "/assets/Frame 174.png"
+          }")`,
+          backgroundSize: "100% 100%",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div
@@ -29,17 +37,17 @@ const AboutSecondSection = () => {
           // }}
         >
           <span
-            className="uppercase Exquisite-Diamond"
+            className="uppercase Exquisite-Diamond mobile:text-[11px]"
             style={{
               letterSpacing: `5px`,
             }}
           >
             Exquisite Diamond Collection
           </span>
-          <h4 className="gilda text-6xl mt-10 Timeless">
+          <h4 className="gilda text-6xl mt-10 Timeless tablet:text-[2.7rem] mobile:text-[1.65rem] mobile:text-center mobile:mt-5">
             Timeless Elegance, Perfected.
           </h4>
-          <p className="w-[50%] text-center my-10 text-lg AboutSecondDesc">
+          <p className="w-[50%] text-center my-10 text-lg AboutSecondDesc tablet:w-[70%] tablet:text-sm mobile:text-sm mobile:w-[85%] mobile:my-5">
             Our lab-grown diamonds combine beauty, quality, and sustainability
             in a way that feels good, inside and out. Made with the latest
             technology, they’re just as brilliant and sparkling as natural
@@ -53,7 +61,7 @@ const AboutSecondSection = () => {
             {/* <LinkArrowButton /> */}
             <button
               onClick={() => navigate("/contact-us")}
-              className="text-lg border border-Charcoal-Gray py-2 px-6 rounded-full hover:bg-Charcoal-Gray hover:text-white duration-500"
+              className="text-lg border border-Charcoal-Gray py-2 px-6 rounded-full hover:bg-Charcoal-Gray hover:text-white duration-500 mobile:text-sm"
             >
               Contact Us
             </button>
