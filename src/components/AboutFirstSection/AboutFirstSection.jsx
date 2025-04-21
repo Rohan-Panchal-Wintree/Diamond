@@ -25,8 +25,9 @@ const AboutFirstSection = () => {
         backgroundSize: `${
           deviceType === "tablet" || deviceType === "mobile"
             ? "cover"
-            : "contain"
+            : "100% 100%"
         } `,
+        // backgroundSize: "100% 100%",
       }}
     >
       <div className="p-6 w-[30%] tablet:flex tablet:w-full mobile:w-full">
@@ -75,7 +76,7 @@ const AboutFirstSection = () => {
       {/* Second section */}
       <div className="w-[70%] flex tablet:flex-col tablet:w-full mobile:flex-col mobile:w-full">
         <div className="flex flex-col items-center p-4 pb-0 w-[65%] tablet:w-full tablet:mt-5 mobile:w-full ">
-          <h4 className="text-6xl smallLaptop:text-[55px] gilda text-center z-10 text-Charcoal-Gray tablet:text-[65px] mobile:text-[30px] ">
+          <h4 className="text-6xl smallLaptop:text-[52px] gilda text-center z-10 text-Charcoal-Gray tablet:text-[65px] mobile:text-[30px] ">
             Sparkle endlessely with{" "}
             <span className="italic flex justify-center items-center">
               exclusive{" "}

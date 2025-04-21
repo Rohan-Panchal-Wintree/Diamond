@@ -20,10 +20,10 @@ const routes = [
         path: "/about-us",
         element: <About />,
       },
-      {
-        path: "/shop",
-        element: <Shop />,
-      },
+      // {
+      //   path: "/shop",
+      //   element: <Shop />,
+      // },
       {
         path: "/contact-us",
         element: <ContactUs />,

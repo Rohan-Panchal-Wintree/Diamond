@@ -27,7 +27,7 @@ const HeaderNavigation = () => {
             />
           </a>
         </div>
-        {deviceType === "mobile" ? null : (
+        {/* {deviceType === "mobile" ? null : (
           <ul className="flex">
             {menu.map((menuItem, index) => {
               return (
@@ -47,7 +47,7 @@ const HeaderNavigation = () => {
               );
             })}
           </ul>
-        )}
+        )} */}
         <div>
           {" "}
           <SidebarDrawer />{" "}

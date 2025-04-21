@@ -2,10 +2,8 @@ import React, { useState } from "react";
 import { useGSAPAnimations } from "../utils/useGSAPAnimation";
 
 const menu = [
-  { title: "Necklaces", link: "#" },
-  { title: "Bracelets", link: "#" },
-  { title: "Earrings", link: "#" },
-  { title: "Pendants", link: "#" },
+  { title: "about us", link: "/about-us" },
+  { title: "contact us", link: "/contact-us" },
 ];
 
 const SidebarDrawer = () => {

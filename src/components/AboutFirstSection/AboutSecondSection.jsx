@@ -5,7 +5,7 @@ import useDeviceType from "../../utils/useDeviceType";
 
 const AboutSecondSection = () => {
   const deviceType = useDeviceType();
-  console.log("device type is:", deviceType);
+  // console.log("device type is:", deviceType);
   const navigate = useNavigate();
 
   useGSAPAnimations("Exquisite-Diamond", "fade", { duration: 1 });
