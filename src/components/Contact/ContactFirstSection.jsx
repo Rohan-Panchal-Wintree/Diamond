@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import emailjs from "emailjs-com";
 import { IoPhonePortraitOutline } from "react-icons/io5";
 import { HiMapPin } from "react-icons/hi2";
@@ -77,11 +77,22 @@ const ContactFirstSection = () => {
       setError("Something went wrong. Please try again.");
     } finally {
       setLoading(false);
-      setTimeout(() => {
+    }
+  };
+
+  useEffect(() => {
+    let timeoutId;
+
+    if (isSent) {
+      timeoutId = setTimeout(() => {
         setIsSent(false);
       }, 3000);
     }
-  };
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, [isSent]);
 
   return (
     <Fragment>
