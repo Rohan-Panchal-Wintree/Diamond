@@ -16,7 +16,10 @@ function App() {
       const end = Date.now();
       const loadTime = end - start;
 
-      console.log(`Page Loaded In ${loadTime} ms`);
+      console.log(
+        `%cPage Loaded In ${loadTime} ms`,
+        `font-weight: bold; color: #2C2C2C`
+      );
     };
 
     if (document.readyState === "complete") {

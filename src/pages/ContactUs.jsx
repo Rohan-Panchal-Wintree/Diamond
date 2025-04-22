@@ -1,8 +1,11 @@
-import React from "react";
+import React, { Fragment } from "react";
+import ContactFirstSection from "../components/Contact/ContactFirstSection";
 
 const ContactUs = () => {
   return (
-    <div className="flex justify-center items-center h-screen">Contact Us</div>
+    <Fragment>
+      <ContactFirstSection />
+    </Fragment>
   );
 };
 
