@@ -20,10 +20,6 @@ const SidebarDrawer = () => {
     duration: 2,
   });
 
-  useEffect(() => {
-    setIsOpen(false);
-  }, [location.pathname]);
-
   return (
     <div className="relative p-4">
       {/* Hamburger Menu Button */}
@@ -62,6 +58,7 @@ const SidebarDrawer = () => {
                 key={index}
                 to={`${item.link}`}
                 className="sidebar-link text-8xl hover:italic mobile:text-5xl"
+                onClick={() => setIsOpen(false)}
               >
                 {item.title}
               </NavLink>
