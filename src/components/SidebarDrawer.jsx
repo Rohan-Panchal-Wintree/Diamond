@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useGSAPAnimations } from "../utils/useGSAPAnimation";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const menu = [
   { title: "home", link: "/" },
@@ -9,6 +10,7 @@ const menu = [
 
 const SidebarDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -17,6 +19,10 @@ const SidebarDrawer = () => {
   useGSAPAnimations("sidebar-link", "slideUp", {
     duration: 2,
   });
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [location.pathname]);
 
   return (
     <div className="relative p-4">
@@ -52,13 +58,13 @@ const SidebarDrawer = () => {
         <div className="flex flex-col justify-center h-full pl-12 text-Charcoal-Gray gilda uppercase space-y-8">
           {menu.map((item, index) => {
             return (
-              <a
+              <NavLink
                 key={index}
-                href={`${item.link}`}
+                to={`${item.link}`}
                 className="sidebar-link text-8xl hover:italic mobile:text-5xl"
               >
                 {item.title}
-              </a>
+              </NavLink>
             );
           })}
         </div>

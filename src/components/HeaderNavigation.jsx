@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import "../styles/HeaderNavigation.css";
 import SidebarDrawer from "./SidebarDrawer";
 import useDeviceType from "../utils/useDeviceType";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const menu = [
   { title: "about us", link: "/about-us" },
@@ -17,37 +17,16 @@ const HeaderNavigation = () => {
     <Fragment>
       <nav className="flex justify-between items-center p-6 px-10 text-Medium-Gray">
         <div className="text-2xl gilda text-Charcoal-Gray capitalize">
-          <a href="/">
+          <Link href="/">
             {/* APG diamonds */}
             <img
               className="w-48 mobile:w-36"
               // src="/assets/APG_DIAMONDS_LOGO_BLACK.webp"
-              src="/assets/apgdiamonds-logo-black.svg"
+              src="/assets/apgdiamonds-logo.svg"
               alt="logo"
             />
-          </a>
+          </Link>
         </div>
-        {/* {deviceType === "mobile" ? null : (
-          <ul className="flex">
-            {menu.map((menuItem, index) => {
-              return (
-                <li
-                  key={index}
-                  className="px-6 uppercase font-thin hover:text-Charcoal-Gray"
-                >
-                  <NavLink
-                    to={menuItem.link}
-                    className={({ isActive }) =>
-                      isActive ? "text-Charcoal-Gray" : ""
-                    }
-                  >
-                    {menuItem.title}
-                  </NavLink>
-                </li>
-              );
-            })}
-          </ul>
-        )} */}
         <div>
           {" "}
           <SidebarDrawer />{" "}
