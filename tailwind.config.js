@@ -16,6 +16,6 @@ export default {
         smallLaptop: { min: "1025px", max: "1400px" },
       },
     },
-  },
+  },  
   plugins: [],
 };
