@@ -120,8 +120,8 @@ const ContactFirstSection = () => {
               className="tablet:h-[30%]"
               src={
                 deviceType === "tablet" || deviceType === "mobile"
-                  ? "/assets/contact-diamond-tablet.png"
-                  : "/assets/contact-diamond.png"
+                  ? "/assets/contact-diamond-tablet.webp"
+                  : "/assets/contact-diamond.webp"
               }
               alt="contact-image"
             />

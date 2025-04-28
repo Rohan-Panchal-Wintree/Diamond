@@ -48,7 +48,7 @@ const HeroSection = () => {
               shining{" "}
               <img
                 className="ml-2 mobile:w-11 mobile:object-contain w-28 mt-4 mobile:mt-0 diamond"
-                src="/assets/hero-section/hero-diamond.png"
+                src="/assets/hero-section/hero-diamond.webp"
               />
               beauty
             </span>
@@ -84,7 +84,7 @@ const HeroSection = () => {
           <div className="flex justify-center">
             <img
               className="w-3/4"
-              src="/assets/hero-section/diamond-mount.png"
+              src="/assets/hero-section/diamond-mount.webp"
               alt="diamond-mount"
             />
           </div>

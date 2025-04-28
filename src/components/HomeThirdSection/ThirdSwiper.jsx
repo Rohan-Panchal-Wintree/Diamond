@@ -9,31 +9,31 @@ import useDeviceType from "../../utils/useDeviceType";
 const products = [
   {
     label: "Triad",
-    image: "/assets/HomeCardsSwiper/Diamond 1.png",
+    image: "/assets/HomeCardsSwiper/Diamond 1.webp",
     title: "Triangle Radiance",
     price: "96",
   },
   {
     label: "Eternity",
-    image: "/assets/HomeCardsSwiper/Diamond 2.png",
+    image: "/assets/HomeCardsSwiper/Diamond 2.webp",
     title: "Celestial Circle",
     price: "96",
   },
   {
     label: "Radiance",
-    image: "/assets/HomeCardsSwiper/Diamond 3.png",
+    image: "/assets/HomeCardsSwiper/Diamond 3.webp",
     title: "Radiant Squareg",
     price: "96",
   },
   {
     label: "Embrace",
-    image: "/assets/HomeCardsSwiper/Diamond 4.png",
+    image: "/assets/HomeCardsSwiper/Diamond 4.webp",
     title: "Heart’s Desire",
     price: "96",
   },
   {
     label: "Eternity",
-    image: "/assets/HomeCardsSwiper/Diamond 2.png",
+    image: "/assets/HomeCardsSwiper/Diamond 2.webp",
     title: "Celestial Circle",
     price: "96",
   },

@@ -3,6 +3,9 @@ import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import useDeviceType from "../../utils/useDeviceType";
 
+// Preload the model
+// useGLTF.preload("/assets/blue_diamond_-_free_giveaway.glb");
+
 export function Model(props) {
   const { nodes, materials } = useGLTF(
     "/assets/blue_diamond_-_free_giveaway.glb"

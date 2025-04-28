@@ -52,13 +52,13 @@ const HomeFifthSection = () => {
                 "radial-gradient(at center, #b7b5b5 15%, transparent 70%",
             }}
           >
-            <img src="/assets/ring-holder.png" alt="ring-holder" />
+            <img src="/assets/ring-holder.webp" alt="ring-holder" />
           </div>
         </div>
         <div className="w-full flex flex-col justify-center pb-7 tablet:pt-10 mobile:pb-0">
           <div className="flex justify-center h-full mobile:flex-col">
             <div className="gray-gradient-reverse w-2/5 relative mobile:w-full mobile:mt-5">
-              <img src="/assets/woman-diamonds.png" alt="model" />
+              <img src="/assets/woman-diamonds.webp" alt="model" />
               <div
                 className="w-2/4 mobile:w-full"
                 style={{
@@ -69,7 +69,7 @@ const HomeFifthSection = () => {
                   left: `${deviceType === "mobile" ? "0%" : "75%"}`,
                 }}
               >
-                <img src="/assets/diamond-with-bg.png" alt="earring-with-bg" />
+                <img src="/assets/diamond-with-bg.webp" alt="earring-with-bg" />
               </div>
             </div>
             <div>
@@ -114,7 +114,7 @@ const HomeFifthSection = () => {
         <div className="flex items-center mt-7 p-4 text-Charcoal-Gray tablet:flex-col tablet:items-start mobile:flex-col mobile:items-start">
           <img
             className="w-14"
-            src="/assets/hero-section/hero-diamond.png"
+            src="/assets/hero-section/hero-diamond.webp"
             alt="ring"
           />
           <p className="w-48 ml-3 tablet:text-2xl tablet:w-full tablet:mt-7 mobile:mt-7 mobile:ml-0">
@@ -131,7 +131,7 @@ const HomeFifthSection = () => {
           your
           <img
             className="w-40 -mt-10 mx-3 object-fit z-10 tablet:w-28 tablet:mx-2 mobile:w-10 mobile:object-contain mobile:mt-0"
-            src="/assets/diamond-end.png"
+            src="/assets/diamond-end.webp"
             alt="pendent"
           />
           style
@@ -158,7 +158,7 @@ const HomeFifthSection = () => {
         />
         <img
           className="w-3/12 bangle diamond-end absolute"
-          src="/assets/diamond-stone.png"
+          src="/assets/diamond-stone.webp"
           alt="bracelet"
         />
       </div>

@@ -10,17 +10,17 @@ const slidesData = [
   {
     label: "Premium Diamonds",
     title: "Ethically Crafted Diamonds",
-    image: "/assets/hero-section/diamond-box.png",
+    image: "/assets/hero-section/diamond-box.webp",
   },
   {
     label: "Timeless Brilliance",
     title: "Sustainably Created Diamonds",
-    image: "/assets/hero-section/sustainably-created-diamonds.png",
+    image: "/assets/hero-section/sustainably-created-diamonds.webp",
   },
   {
     label: "Unmatched Quality",
     title: "Certified Lab-Grown Quality",
-    image: "/assets/hero-section/certified lab-grown-quality.png",
+    image: "/assets/hero-section/certified lab-grown-quality.webp",
   },
 ];
 

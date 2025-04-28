@@ -10,21 +10,21 @@ const Home = () => {
     <Fragment>
       <div
         className="home"
-        style={{ backgroundImage: `url("assets/white-luxury-fabric.jpg")` }}
+        style={{ backgroundImage: `url("assets/white-luxury-fabric.webp")` }}
       >
         <HeroSection />
       </div>
       <div
         className="home-second-section"
         style={{
-          backgroundImage: `url("assets/white-luxury-fabric.jpg")`,
+          backgroundImage: `url("assets/white-luxury-fabric.webp")`,
         }}
       >
         <SecondSection />
       </div>
       <div
         style={{
-          backgroundImage: `url("/assets/home-third-section-white.jpg")`,
+          backgroundImage: `url("/assets/home-third-section-white.webp")`,
           backgroundSize: "cover",
         }}
       >

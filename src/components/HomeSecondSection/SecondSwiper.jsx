@@ -11,19 +11,19 @@ const slideData = [
     start: "Lab-grown diamonds",
     highlightText: "eco-friendly",
     end: "brilliance.",
-    image: "/assets/polished-diamond.png",
+    image: "/assets/polished-diamond.webp",
   },
   {
     start: "Lab-grown diamonds",
     highlightText: "reduce environmental",
     end: "impact and avoid ethical concerns.",
-    image: "/assets/polished-diamond.png",
+    image: "/assets/polished-diamond.webp",
   },
   {
     start: "They offer",
     highlightText: "high-quality alternatives",
     end: "for jewelry and industrial use.",
-    image: "/assets/polished-diamond.png",
+    image: "/assets/polished-diamond.webp",
   },
 ];
 
@@ -49,7 +49,7 @@ const SecondSwiper = () => {
               <div className="flex pb-4 mobile:flex-col">
                 <div className="w-40 mobile:w-32">
                   <img
-                    src="/assets/polished-diamond.png"
+                    src="/assets/polished-diamond.webp"
                     alt="polished diamond"
                   />
                 </div>

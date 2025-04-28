@@ -120,12 +120,12 @@ const AboutThirdSection = () => {
   ];
 
   const rightImages = [
-    "/assets/about-us-lab-grown-diamonds.png",
-    "/assets/about-us-lab-grown-diamonds-2.png",
-    "/assets/about-us-lab-grown-diamonds-3.png",
-    "/assets/about-us-lab-grown-diamonds-4.png",
-    "/assets/about-us-lab-grown-diamonds-5.png",
-    "/assets/about-us-lab-grown-diamonds-6.png",
+    "/assets/about-us-lab-grown-diamonds.webp",
+    "/assets/about-us-lab-grown-diamonds-2.webp",
+    "/assets/about-us-lab-grown-diamonds-3.webp",
+    "/assets/about-us-lab-grown-diamonds-4.webp",
+    "/assets/about-us-lab-grown-diamonds-5.webp",
+    "/assets/about-us-lab-grown-diamonds-6.webp",
   ];
 
   // Animation for when contentIndex changes

@@ -37,7 +37,7 @@ const SecondSection = () => {
             <div className="w-6/12 flex object-contain mobile:w-full">
               <img
                 className=" model-image"
-                src="/assets/home-diamond-2.png"
+                src="/assets/home-diamond-2.webp"
                 alt="model"
               />
             </div>
@@ -93,7 +93,7 @@ const SecondSection = () => {
                   </div>
                 </div>
                 <div className="w-full pt-5 earrings">
-                  <img src="/assets/Diamond-two.png" alt="earrings" />
+                  <img src="/assets/Diamond-two.webp" alt="earrings" />
                 </div>
               </div>
             </div>

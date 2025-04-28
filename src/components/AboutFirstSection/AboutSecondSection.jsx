@@ -18,13 +18,13 @@ const AboutSecondSection = () => {
         // className="h-screen p-8 bg-gray-100"
         className="h-screen bg-gray-100 tablet:h-[60vh] mobile:h-screen"
         style={{
-          // backgroundImage: `url("assets/about-second-section-frabric-white.jpg")`,
+          // backgroundImage: `url("assets/about-second-section-frabric-white.webp")`,
           backgroundImage: `url("${
             deviceType === "mobile"
-              ? "/assets/Frame 174-mobile.png"
+              ? "/assets/Frame 174-mobile.webp"
               : deviceType === "tablet"
-              ? "/assets/Frame 174-tablet.png"
-              : "/assets/Frame 174.png"
+              ? "/assets/Frame 174-tablet.webp"
+              : "/assets/Frame 174.webp"
           }")`,
           backgroundSize: "100% 100%",
           backgroundRepeat: "no-repeat",

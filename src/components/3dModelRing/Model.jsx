@@ -1,17 +1,33 @@
-import React, { useRef } from "react";
+import React, { useMemo, useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 
-export function Model(props) {
-  const { nodes, materials } = useGLTF("/assets/jewelery_-_ring-_diamonds.glb");
+// Preload the model at the top level
+useGLTF.preload("/assets/jewelery_-_ring-_diamonds.glb");
+
+const Model = React.memo((props) => {
+  const gltf = useGLTF("/assets/jewelery_-_ring-_diamonds.glb");
+
+  const { nodes, materials } = useMemo(() => {
+    return {
+      nodes: gltf.nodes,
+      materials: gltf.materials,
+    };
+  }, [gltf]);
 
   const groupRef = useRef();
 
-  useFrame(() => {
+  useFrame((_, delta) => {
     if (groupRef.current) {
-      groupRef.current.rotation.y += 0.01;
+      groupRef.current.rotation.y += delta * 0.5;
     }
   });
+
+  // useFrame(() => {
+  //   if (groupRef.current) {
+  //     groupRef.current.rotation.y += 0.01;
+  //   }
+  // });
 
   return (
     <group ref={groupRef} {...props} dispose={null}>
@@ -56,6 +72,6 @@ export function Model(props) {
       </group>
     </group>
   );
-}
+});
 
-useGLTF.preload("assets/jewelery_-_ring-_diamonds.glb");
+export default Model;

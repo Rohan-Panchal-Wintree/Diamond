@@ -77,7 +77,7 @@ const HomeFourthSection = () => {
         {/* side right bottom section */}
         <div className="flex justify-between p-4 pb-0 mt-10 mobile:flex-col">
           <div className="flex items-end w-2/4 grow mobile:w-full border">
-            <img src="/assets/third-diamond.png" alt="jewellery" />
+            <img src="/assets/third-diamond.webp" alt="jewellery" />
           </div>
           <div className="p-4 max-w-md tablet:max-w-sm my-auto mobile:mt-10 mobile:p-0">
             <FourthSwiper />

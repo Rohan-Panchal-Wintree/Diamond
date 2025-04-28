@@ -21,7 +21,7 @@ const AboutFirstSection = () => {
     <div
       className="flex pt-4 p-2 tablet:flex-col mobile:flex-col"
       style={{
-        backgroundImage: `url("assets/white-luxury-fabric.jpg")`,
+        backgroundImage: `url("assets/white-luxury-fabric.webp")`,
         backgroundSize: `${
           deviceType === "tablet" || deviceType === "mobile"
             ? "cover"
@@ -40,7 +40,7 @@ const AboutFirstSection = () => {
               <div className="-mt-40">
                 <img
                   className="self-end"
-                  src="assets/about-first-section-fabric.png"
+                  src="assets/about-first-section-fabric.webp"
                   alt="jewellery"
                 />
               </div>
@@ -81,14 +81,18 @@ const AboutFirstSection = () => {
             <span className="italic flex justify-center items-center">
               exclusive{" "}
               <span className="flex w-16 mx-2 object-contain sparkling-diamond-ring mobile:w-12">
-                <img src="/assets/sparkling-diamond-ring.png" alt="ring" />
+                <img src="/assets/sparkling-diamond-ring.webp" alt="ring" />
               </span>{" "}
               diamond
             </span>{" "}
             designs
           </h4>
           <div className="flex gray-gradient w-[65%] smallLaptop:w-[70%] h-full -mt-5 mb-5 tablet:w-[50%] mobile:w-[70%] mobile:-mt-0">
-            <img className="-mt-10" src="/assets/About-Model.png" alt="model" />
+            <img
+              className="-mt-10"
+              src="/assets/About-Model.webp"
+              alt="model"
+            />
           </div>
         </div>
 
@@ -120,7 +124,7 @@ const AboutFirstSection = () => {
               unmatched beauty
             </p>
             <div className="my-4 w-[83%] smallLaptop:w-[90%] mobile:w-full">
-              <img src="/assets/about-diamond-hero.png" alt="diamond" />
+              <img src="/assets/about-diamond-hero.webp" alt="diamond" />
             </div>
           </div>
         </div>

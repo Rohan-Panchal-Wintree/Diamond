@@ -6,12 +6,12 @@ const AvatarGroup = ({ className = "" }) => {
     <div className={`flex w-16 avatar-container ${className}`}>
       <img
         className="rounded-full -ml-1 object-cover"
-        src="/assets/avatar.jpg"
+        src="/assets/avatar.webp"
         alt="name"
       />
       <img
         className="rounded-full -ml-1 object-cover"
-        src="/assets/avatar-2.jpg"
+        src="/assets/avatar-2.webp"
         alt="name"
       />
     </div>

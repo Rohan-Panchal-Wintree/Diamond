@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useGSAPAnimations } from "../utils/useGSAPAnimation";
 
 const menu = [
+  { title: "home", link: "/" },
   { title: "about us", link: "/about-us" },
   { title: "contact us", link: "/contact-us" },
 ];
@@ -45,7 +46,7 @@ const SidebarDrawer = () => {
           isOpen ? "transform translate-x-0" : "transform -translate-x-full"
         }`}
         style={{
-          backgroundImage: `url("/assets/sidebar-white-silk-bg.jpg")`,
+          backgroundImage: `url("/assets/sidebar-white-silk-bg.webp")`,
         }}
       >
         <div className="flex flex-col justify-center h-full pl-12 text-Charcoal-Gray gilda uppercase space-y-8">

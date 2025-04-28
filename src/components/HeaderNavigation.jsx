@@ -20,8 +20,8 @@ const HeaderNavigation = () => {
           <a href="/">
             {/* APG diamonds */}
             <img
-              className="w-48 mobile:w-24"
-              // src="/assets/APG_DIAMONDS_LOGO_BLACK.png"
+              className="w-48 mobile:w-36"
+              // src="/assets/APG_DIAMONDS_LOGO_BLACK.webp"
               src="/assets/apgdiamonds-logo-black.svg"
               alt="logo"
             />
