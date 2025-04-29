@@ -6,11 +6,13 @@ import RootLayout from "./components/RootLayout";
 import Shop from "./pages/Shop";
 import ContactUs from "./pages/ContactUs";
 import NotFound from "./pages/NotFound";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const routes = [
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErrorBoundary />,
     children: [
       {
         path: "/",

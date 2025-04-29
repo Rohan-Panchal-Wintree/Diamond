@@ -48,10 +48,7 @@ const SecondSwiper = () => {
             <SwiperSlide key={index}>
               <div className="flex pb-4 mobile:flex-col">
                 <div className="w-40 mobile:w-32">
-                  <img
-                    src="/assets/polished-diamond.webp"
-                    alt="polished diamond"
-                  />
+                  <img src={slide.image} alt="polished diamond" />
                 </div>
                 <div className="pl-4">
                   <h4 className="text-2xl mb-5 mobile:text-xl">

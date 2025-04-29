@@ -4,7 +4,6 @@ import SecondSection from "../components/HomeSecondSection/SecondSection";
 import HomeThirdSection from "../components/HomeThirdSection/HomeThirdSection";
 import HomeFourthSection from "../components/HomeFourthSection/HomeFourthSection";
 import HomeFifthSection from "../components/HomeFifthSection/HomeFifthSection";
-
 const Home = () => {
   return (
     <Fragment>

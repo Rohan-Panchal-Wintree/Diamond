@@ -11,7 +11,11 @@ const HomeThirdSection = () => {
           New <span className="italic">diamonds</span> collections
         </h4>
         <div className="flex items-center mobile:mt-5">
-          <UnderlineButton title="Contact us" className="mr-3 " />
+          <UnderlineButton
+            title="Contact us"
+            className="mr-3"
+            link="/contact-us"
+          />
           <LinkArrowButton />
         </div>
       </div>
