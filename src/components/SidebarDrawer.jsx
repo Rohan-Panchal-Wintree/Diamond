@@ -44,14 +44,14 @@ const SidebarDrawer = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed z-40 top-0 left-0 w-full h-full transition-transform duration-300 ease-in-out ${
+        className={`fixed z-40 top-0 left-0 w-full h-full transition-transform duration-300 ease-in-out bg-red-300 ${
           isOpen ? "transform translate-x-0" : "transform -translate-x-full"
         }`}
         style={{
           backgroundImage: `url("/assets/sidebar-white-silk-bg.webp")`,
         }}
       >
-        <div className="flex flex-col justify-center h-full pl-12 text-Charcoal-Gray gilda uppercase space-y-8">
+        <div className="flex flex-col justify-center h-full pl-12 text-Charcoal-Gray gilda uppercase space-y-8 mobile:pl-7">
           {menu.map((item, index) => {
             return (
               <NavLink

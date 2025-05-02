@@ -108,7 +108,7 @@ const ContactFirstSection = () => {
             <h4 className="mb-2 font-bold text-lg">Phone</h4>
             <p>+32484221800</p>
           </div>
-          <div className="p-4 border border-l-0 tablet:border flex-1">
+          <div className="p-4 border border-l-0 tablet:border flex-1 mobile:border ">
             <MdEmail className="text-4xl mb-2" />
             <h4 className="mb-2 font-bold text-lg">Email</h4>
             <p>adit@apgdiamonds.com</p>
@@ -128,7 +128,7 @@ const ContactFirstSection = () => {
           </div>
           <div className="w-[50%] p-8 px-12 tablet:w-full tablet:px-7 mobile:w-full mobile:px-7">
             <div>
-              <h4 className="text-4xl mb-4 smallLaptop:text-3xl">
+              <h4 className="text-4xl mb-4 smallLaptop:text-3xl mobile:text-[30px]">
                 Connect With Us
               </h4>
               <p className="text-[12px] mb-6">
