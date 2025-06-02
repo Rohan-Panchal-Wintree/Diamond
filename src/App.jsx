@@ -3,6 +3,7 @@ import { router } from "./routes";
 import "./App.css";
 import { Fragment, useEffect, useState } from "react";
 import Loader from "./components/Loader";
+import WhatsappBtn from "./components/WhatsappBtn";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -38,6 +39,7 @@ function App() {
   return (
     <Fragment>
       <RouterProvider router={router} />
+      <WhatsappBtn />
     </Fragment>
   );
 }
